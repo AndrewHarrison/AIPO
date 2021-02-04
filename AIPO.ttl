@@ -21,13 +21,11 @@
   skos:example xsd:string ;
   skos:definition xsd:string ;
   skos:altLable xsd:string ;
+  skos:inScheme skos:ConceptScheme ;
   skos:prefLabel xsd:string .
 
 <skos:Collection>
   skos:member skos:Concept .
-
-<skos:Concept>
-  skos:inScheme skos:ConceptScheme .
 
 <skos:ConceptScheme>
   dct:title xsd:string .
@@ -60,26 +58,20 @@
   dct:publisher foaf:Agent .
 
 <foaf:Agent>
-owl:sameAs dct:Agent ;
-foaf:name xsd:string ;
-foaf:homepage foaf:Document .
+  owl:sameAs dct:Agent ;
+  foaf:name xsd:string ;
+  foaf:homepage foaf:Document .
 
 <foaf:Group>
-foaf:member foaf:Agent ;
-rdfs:subclassOf foaf:Agent .
+  foaf:member foaf:Agent ;
+  rdfs:subclassOf foaf:Agent .
 
 <foaf:Organization>
-rdfs:subclassOf foaf:Agent ;
-owl:sameAs org:Organization ;
-org:classification skos:ConceptScheme .
-
-skos:ConceptScheme & dct:title & xsd:string \\
-
-skos:Concept & skos:inScheme & skos:ConceptScheme \\
-skos:Concept & skos:prefLabel  & xsd:string \\
-skos:Concept & skos:altLabel & xsd:string \\
+  rdfs:subclassOf foaf:Agent ;
+  owl:sameAs org:Organization ;
+  org:classification skos:ConceptScheme .
 
 <foaf:Person> 
   rdfs:subclassOf foaf:Agent ;
   foaf:gender xsd:string ;
-  owl:sameAs schema:Person . 
+  owl:sameAs schema:Person .
