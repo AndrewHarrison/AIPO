@@ -11,18 +11,18 @@
 @prefix modsci: <https://w3id.org/skgo/modsci> .
 @prefix org: <http://www.w3.org/ns/org#>
 
+<skos:Concept>
+  skos:relatedMatch skos:Concept ;
+  skos:exactMatch skos:Concept ;
+  skos:closeMatch skos:Concept ;
+  skos:narrowMatch skos:Concept ;
+  skos:broadMatch skos:Concept ;
+  skos:related skos:Concept ;
+  skos:example xsd:string ;
+  skos:definition xsd:string ;
+  skos:altLable xsd:string ;
+  skos:prefLabel xsd:string .
 
-
-skos:Concept & skos:relatedMatch & skos:Concept\\
-skos:Concept & skos:exactMatch & skos:Concept\\
-skos:Concept & skos:closeMatch & skos:Concept\\
-skos:Concept & skos:narrowMatch &skos:Concept\\
-skos:Concept & skos:broadMatch &skos:Concept\\
-skos:Concept & skos:related & skos:Concept\\
-skos:Concept & skos:example & xsd:string \\
-skos:Concept & skos:definition & xsd:string \\
-skos:Concept & skos:altLable & xsd:string \\
-skos:Concept & skos:prefLabel & xsd:string \\
 skos:Collection & skos:member & skos:Concept \\
 skos:Concept & skos:inScheme & skos:ConceptScheme \\
 skos:ConceptScheme & dct:title & xsd:string \\
