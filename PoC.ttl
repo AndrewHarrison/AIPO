@@ -1,1 +1,35 @@
-Add stuff.
+@aipo <http://example.org/aipo> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix modsci: <https://w3id.org/skgo/modsci> .
+@prefix org: <http://www.w3.org/ns/org#>
+
+
+<_:exampledcatResource>
+  a dcat:Resource
+  dct:created "2019-05-22"^^xsd:date
+  dct:title "Recommendation of the Council on Artificial Intelligence, OECD/LEGAL/0449"^^xsd:string
+  dct:format application/pdf
+  dct:format text/html
+  dct:bibliographicCitation "OECD. (2019). Recommendation of the council on artificial intelligence"^^xsd:string
+  dct:alternative "OECD Principles"^^xsd:string
+  dct:language "en"^^xsd:language
+  dct:language "fr"^^xsd:language
+  dct:description "The Recommendation identifies five complementary values-based principles for the responsible stewardship of trustworthy AI and calls on AI actors to promote and implement them"^^xsd:string
+  dct:extent <_:exampledctSizeOrDuration>
+  aipo:hasPrincipleSet <_:examplePrincipleSet>
+
+<_:exampledctSizeOrDuration>
+  aipo:hasWordCount "4024"^^xsd:integer
+  aipo:hasPageLength "11"^^xsd:integer
+
+<_:examplePrincipleSet>
+  dct:title "OECD"^^xsd:string
+  
