@@ -93,6 +93,7 @@
   foaf:name "Commonwealth of Australia"^^xsd:string ;
   foaf:member <_:exampleGroup> .
   
-  
+<http://www.oecd.org>
+  rdfs:label "OECD" .
 
   
