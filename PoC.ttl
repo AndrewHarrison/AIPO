@@ -12,7 +12,7 @@
 @prefix org: <http://www.w3.org/ns/org#>
 
 
-<_:exampledcatResource>
+<_:exampledcatResource1>
   a dcat:Resource
   dct:created "2019-05-22"^^xsd:date
   dct:title "Recommendation of the Council on Artificial Intelligence, OECD/LEGAL/0449"^^xsd:string
@@ -25,6 +25,12 @@
   dct:description "The Recommendation identifies five complementary values-based principles for the responsible stewardship of trustworthy AI and calls on AI actors to promote and implement them"^^xsd:string
   dct:extent <_:exampledctSizeOrDuration>
   aipo:hasPrincipleSet <_:examplePrincipleSet>
+  dct:type dctype:Text
+  dct:subject modsci:ArtificialIntelligence
+
+<_:exampledcatResource2>
+  dct:source <_:exampledcatResource1>
+  dct:title "G20 AI Principles"^^xsd:string
 
 <_:exampledctSizeOrDuration>
   aipo:hasWordCount "4024"^^xsd:integer
@@ -32,4 +38,19 @@
 
 <_:examplePrincipleSet>
   dct:title "OECD"^^xsd:string
+  
+<_:exampleConcept1>
+  skos:inScheme <_:examplePrincipleSet>
+  skos:related <_:exampleConcept2>
+  skos:example "Software developer is accountable for biased decisioning of credit scoring system"^^xsd:string
+  skos:definition "AI actors should be accountable for the proper functioning of AI systems and for the respect of the above principles, based on their roles, the context, and consistent with the state of art."^^xsd:string
+  skos:altLabel "responsibility"^^xsd:string
+  skos:prefLabel "accountability"^^xsd:string
+
+<_:exampleConcept2>
+  skos:inScheme <_:examplePrincipleSet>
+  skos:prefLabel "transparency and explainability"^^xsd:string
+  
+  
+
   
