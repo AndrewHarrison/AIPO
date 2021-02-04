@@ -75,3 +75,24 @@ aipo <http://example.org/aipo> .
   rdfs:subclassOf foaf:Agent ;
   foaf:gender xsd:string ;
   owl:sameAs schema:Person .
+
+<aipo:hasWordCount>
+  a owl:DatatypeProperty ;
+  rdfs:domain dct:SizeOrDuration ;
+  rdfs:range xsd:integer ;
+  rdfs:label "hasWordCount" ;
+  rdfs:comment "The number of words" .
+
+<aipo:hasPageLength>
+  a owl:DatatypeProperty ;
+  rdfs:domain dct:SizeOrDuration ;
+  rdfs:range xsd:integer ;
+  rdfs:label "hasPageLength" ;
+  rdfs:comment "The number of pages ".
+
+<aipo:hasPrincipleSet>
+  a owl:ObjectProperty ;
+  rdfs:domain dcat:Resource ;
+  rdfs:range skos:ConceptScheme ;
+  rdfs:label "hasPrincipleSet" ;
+  rdfs:comment "The AI principle set contained in the resource" .
