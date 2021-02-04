@@ -7,6 +7,6 @@ All figures from the paper are available in the Assets folder.
 
 The ontology itself is available in the AIPO.ttl file in turtle (https://www.w3.org/TR/turtle/) format.
 
-The Proof of Concept using the OECD AI principles is in the PoC.ttl file.
+The Proof of Concept using the OECD AI principles is available in the PoC.ttl file.
 
 If you have any queries, please contact Andrew.Harrison at student.uva.nl.
