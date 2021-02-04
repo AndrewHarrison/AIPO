@@ -44,8 +44,8 @@
   aipo:hasPageLength xsd:integer .
 
 <dcat:Resource>
-  dct:format dct:FileFormat [MIME\_Type] ;
-  dct:spatial dct:Location $\langle$URI-Geonames$\rangle$ ;
+  dct:format dct:FileFormat [MIME_Type] ;
+  dct:spatial dct:Location <URI-Geonames> ;
   dct:created xsd:date ;
   dct:bibliographicCitation xsd:string ;
   dct:alternative xsd:string ;
