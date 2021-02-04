@@ -1,6 +1,8 @@
 # AIPO
-AI Principles Ontology
+This repository hosts the resources for the AI Principles Ontology (AIPO).
 
-All Assets (images etc.) from the paper are available in the Assets folder.
+The background to and process for developing the ontology is described in the paper "An Ontology for Ethical AI Principles".
 
-The ontology is available in the AIPO.?? file.
+All resources (images etc.) from the paper are available in the Assets folder.
+
+The ontology itself is available in the AIPO.?? file.
