@@ -23,42 +23,63 @@
   skos:altLable xsd:string ;
   skos:prefLabel xsd:string .
 
-skos:Collection & skos:member & skos:Concept \\
-skos:Concept & skos:inScheme & skos:ConceptScheme \\
+<skos:Collection>
+  skos:member skos:Concept .
+
+<skos:Concept>
+  skos:inScheme skos:ConceptScheme .
+
+<skos:ConceptScheme>
+  dct:title xsd:string .
+
+<dcat:Resource> 
+  aipo:hasPrincipleSet skos:ConceptScheme ;
+  dct:hasVersion dcat:Resource ;
+  dct:references dcat:Resource ;
+  dct:type dctype:Text ;
+  dct:source dcat:Resource ;
+  dct:subject modsci:ArtificialIntelligence ;
+  dct:extent dct:SizeorDuration .
+
+<dct:SizeorDuration>
+  aipo:hasWordCount xsd:integer ;
+  aipo:hasPageLength xsd:integer .
+
+<dcat:Resource>
+  dct:format dct:FileFormat [MIME\_Type] ;
+  dct:spatial dct:Location $\langle$URI-Geonames$\rangle$ ;
+  dct:created xsd:date ;
+  dct:bibliographicCitation xsd:string ;
+  dct:alternative xsd:string ;
+  dct:title xsd:string ;
+  dct:language xsd:language ;
+  dct:description xsd:string ;
+  dct:contributor foaf:Agent ;
+  dct:creator foaf:Agent ;
+  dct:audience foaf:Agent ;
+  dct:publisher foaf:Agent .
+
+<foaf:Agent>
+owl:sameAs dct:Agent ;
+foaf:name xsd:string ;
+foaf:homepage foaf:Document .
+
+<foaf:Group>
+foaf:member foaf:Agent ;
+rdfs:subclassOf foaf:Agent .
+
+<foaf:Organization>
+rdfs:subclassOf foaf:Agent ;
+owl:sameAs org:Organization ;
+org:classification skos:ConceptScheme .
+
 skos:ConceptScheme & dct:title & xsd:string \\
-dcat:Resource & :hasPrincipleSet & skos:ConceptScheme \\
-dcat:Resource & dct:hasVersion & dcat:Resource \\
-dcat:Resource & dct:references & dcat:Resource \\
-dcat:Resource & dct:type & dctype:Text \\
-dcat:Resource & dct:source & dcat:Resource \\
-dcat:Resource & dct:subject & modsci:ArtificialIntelligence \\
-dcat:Resource & dct:extent & dct:SizeorDuration \\
-dct:SizeorDuration & :hasWordCount & xsd:integer \\
-dct:SizeorDuration & :hasPageLength & xsd:integer \\
-dcat:Resource & dct:format & dct:FileFormat [MIME\_Type] \\
-dcat:Resource & dct:spatial & dct:Location $\langle$URI-Geonames$\rangle$ \\
-dcat:Resource & dct:created & xsd:date \\
-dcat:Resource & dct:bibliographicCitation & xsd:string \\
-dcat:Resource & dct:alternative & xsd:string \\
-dcat:Resource & dct:title & xsd:string \\
-dcat:Resource & dct:language & xsd:language \\
-dcat:Resource & dct:description & xsd:string \\
-dcat:Resource & dct:contributor & foaf:Agent \\
-dcat:Resource & dct:creator & foaf:Agent \\
-dcat:Resource & dct:audience & foaf:Agent \\
-dcat:Resource & dct:publisher & foaf:Agent \\
-foaf:Agent & owl:sameAs & dct:Agent \\
-foaf:Agent & foaf:name & xsd:string \\
-foaf:Agent & foaf:homepage & foaf:Document \\
-foaf:Group & foaf:member & foaf:Agent \\
-foaf:Group & rdfs:subclassOf & foaf:Agent \\
-foaf:Organization & rdfs:subclassOf & foaf:Agent \\
-foaf:Organization & owl:sameAs & org:Organization \\
-foaf:Organization & org:classification & skos:ConceptScheme \\
-skos:ConceptScheme & dct:title & xsd:string \\
+
 skos:Concept & skos:inScheme & skos:ConceptScheme \\
 skos:Concept & skos:prefLabel  & xsd:string \\
 skos:Concept & skos:altLabel & xsd:string \\
-foaf:Person & rdfs:subclassOf & foaf:Agent \\
-foaf:Person & foaf:gender & xsd:string \\
-foaf:Person & owl:sameAs & schema:Person \\
+
+<foaf:Person> 
+  rdfs:subclassOf foaf:Agent ;
+  foaf:gender xsd:string ;
+  owl:sameAs schema:Person . 
