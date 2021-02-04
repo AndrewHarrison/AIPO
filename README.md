@@ -5,6 +5,6 @@ The background to and process for developing the ontology is described in the pa
 
 All figures from the paper are available in the Assets folder.
 
-The ontology itself is available in the AIPO.?? file.
+The ontology itself is available in the AIPO.ttl file in turtle (https://www.w3.org/TR/turtle/) format.
 
 If you have any queries, please contact Andrew.Harrison at student.uva.nl.
