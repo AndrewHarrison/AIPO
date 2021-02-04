@@ -12,44 +12,75 @@
 @prefix org: <http://www.w3.org/ns/org#>
 
 
-<_:exampledcatResource1>
-  a dcat:Resource
-  dct:created "2019-05-22"^^xsd:date
-  dct:title "Recommendation of the Council on Artificial Intelligence, OECD/LEGAL/0449"^^xsd:string
-  dct:format application/pdf
-  dct:format text/html
-  dct:bibliographicCitation "OECD. (2019). Recommendation of the council on artificial intelligence"^^xsd:string
-  dct:alternative "OECD Principles"^^xsd:string
-  dct:language "en"^^xsd:language
-  dct:language "fr"^^xsd:language
-  dct:description "The Recommendation identifies five complementary values-based principles for the responsible stewardship of trustworthy AI and calls on AI actors to promote and implement them"^^xsd:string
-  dct:extent <_:exampledctSizeOrDuration>
-  aipo:hasPrincipleSet <_:examplePrincipleSet>
-  dct:type dctype:Text
-  dct:subject modsci:ArtificialIntelligence
+<_:exampledResource1>
+  a dcat:Resource ;
+  dct:created "2019-05-22"^^xsd:date ;
+  dct:title "Recommendation of the Council on Artificial Intelligence, OECD/LEGAL/0449"^^xsd:string ;
+  dct:format <_:exampleFile1> ;
+  dct:format <_:exampleFile2> ;
+  dct:bibliographicCitation "OECD. (2019). Recommendation of the council on artificial intelligence"^^xsd:string ;
+  dct:alternative "OECD Principles"^^xsd:string ;
+  dct:language "en"^^xsd:language ;
+  dct:language "fr"^^xsd:language ;
+  dct:description "The Recommendation identifies five complementary values-based principles for the responsible stewardship of trustworthy AI and calls on AI actors to promote and implement them"^^xsd:string ;
+  dct:extent <_:exampleSizeOrDuration> ;
+  aipo:hasPrincipleSet <_:exampleConceptSchemePrincipleSet> ;
+  dct:type dctype:Text ;
+  dct:subject <_:exampleSubject> ;
+  dct:creator <_:exampleOrganization> ;
+  dct:publisher <_:exampleOrganization> .
 
-<_:exampledcatResource2>
-  dct:source <_:exampledcatResource1>
-  dct:title "G20 AI Principles"^^xsd:string
+<_:exampleFile1>
+  a dct:FileFormat[application/pdf] .
 
-<_:exampledctSizeOrDuration>
-  aipo:hasWordCount "4024"^^xsd:integer
-  aipo:hasPageLength "11"^^xsd:integer
+<_:exampleSubject>
+  a modsci:ArtificialIntelligence .
 
-<_:examplePrincipleSet>
-  dct:title "OECD"^^xsd:string
+<_:exampleFile2>
+  a dct:FileFormat[text/html] .
+
+<_:exampledResource2>
+  a dcat:Resource ;
+  dct:source <_:exampledResource1> ;
+  dct:title "G20 AI Principles"^^xsd:string .
+
+<_:exampleSizeOrDuration>
+  a dct:SizeOrDuration ;
+  aipo:hasWordCount "4024"^^xsd:integer ;
+  aipo:hasPageLength "11"^^xsd:integer .
+
+<_:exampleConceptSchemePrincipleSet>
+  a skos:ConceptScheme ;
+  dct:title "OECD"^^xsd:string .
   
 <_:exampleConcept1>
-  skos:inScheme <_:examplePrincipleSet>
-  skos:related <_:exampleConcept2>
-  skos:example "Software developer is accountable for biased decisioning of credit scoring system"^^xsd:string
-  skos:definition "AI actors should be accountable for the proper functioning of AI systems and for the respect of the above principles, based on their roles, the context, and consistent with the state of art."^^xsd:string
-  skos:altLabel "responsibility"^^xsd:string
-  skos:prefLabel "accountability"^^xsd:string
+  a skos:Concept ;
+  skos:inScheme <_:exampleConceptSchemePrincipleSet> ;
+  skos:related <_:exampleConcept2> ;
+  skos:example "Software developer is accountable for biased decisioning of credit scoring system"^^xsd:string ;
+  skos:definition "AI actors should be accountable for the proper functioning of AI systems and for the respect of the above principles, based on their roles, the context, and consistent with the state of art."^^xsd:string ;
+  skos:altLabel "responsibility"^^xsd:string ;
+  skos:prefLabel "accountability"^^xsd:string .
 
 <_:exampleConcept2>
-  skos:inScheme <_:examplePrincipleSet>
-  skos:prefLabel "transparency and explainability"^^xsd:string
+  a skos:Concept ;
+  skos:inScheme <_:exampleConceptSchemePrincipleSet> ;
+  skos:prefLabel "transparency and explainability"^^xsd:string .
+
+<_:exampleOrganization>
+  a foaf:Organization ;
+  owl:sameAs org:Organization ;
+  foaf:name "OECD"^^xsd:string ;
+  foaf:homepage <www.oecd.org> ;
+  org:classification <_:exampleConceptSchemeOrganization> .
+
+<_:exampleConceptSchemeOrganization>
+  a skos:ConceptScheme ;
+  dct:title "Organisation Type"^^xsd:string .
+  
+<_: >
+  a skos:Concept ;
+  skos:inScheme <_:exampleConceptSchemeOrganization>
   
   
 
