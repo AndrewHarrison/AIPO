@@ -27,6 +27,7 @@
   aipo:hasPrincipleSet <_:exampleConceptSchemePrincipleSet> ;
   dct:type dctype:Text ;
   dct:subject <_:exampleSubject> ;
+  dct:audience <_:exampleGroup> ;
   dct:creator <_:exampleOrganization> ;
   dct:publisher <_:exampleOrganization> .
 
@@ -71,16 +72,26 @@
   a foaf:Organization ;
   owl:sameAs org:Organization ;
   foaf:name "OECD"^^xsd:string ;
-  foaf:homepage <www.oecd.org> ;
+  foaf:homepage <http://www.oecd.org> ;
   org:classification <_:exampleConceptSchemeOrganization> .
 
 <_:exampleConceptSchemeOrganization>
   a skos:ConceptScheme ;
   dct:title "Organisation Type"^^xsd:string .
   
-<_: >
+<_:exampleOrgType>
   a skos:Concept ;
-  skos:inScheme <_:exampleConceptSchemeOrganization>
+  skos:inScheme <_:exampleConceptSchemeOrganization> ;
+  skos:prefLabel "Intergovernmental"^^xsd:string ;
+  skos:altLabel "Multilateral"^^xsd:string .
+
+<_:exampleGroup>
+  a foaf:Group ;
+  foaf:name "OECD Member Countries"^^xsd:string .
+  
+<https://www.geonames.org/2077456>
+  foaf:name "Commonwealth of Australia"^^xsd:string ;
+  foaf:member <_:exampleGroup> .
   
   
 
